@@ -1,3 +1,3 @@
 # ee-ski-resort-graph
 ## Overview
-This repository will contain the experimental work that I will be carrying out as part of my Extended Essay (EE) in Computer Science for my IB Diploma. This repository will contain the experimental work that I will be carrying out as part of my Extended Essay in Computer Science for my IB Diploma. The experimental work will be centred around using Dijkstra's algorithm and A* algorithm on a graph representing an Austrian ski resort.
+This repository contains the experimental work that I will carry out as part of my Extended Essay in Computer Science for my IB Diploma. The experimental work will be centred around comparing the use of Dijkstra's algorithm and A* algorithm on a graph representing an Austrian ski resort in order to answer my research question, "To what extent is Dijkstra's algorithm more time and memory efficient than A* algorithm when finding the shortest path between two nodes in a graph representing ski resort?". 
