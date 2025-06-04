@@ -3,12 +3,18 @@ import networkx as nx
 from geopy.distance import geodesic
 import matplotlib.pyplot as plt
 import time
+import requests
+from io import StringIO
 
 # STEP 1: Load GTFS files
 stops = pd.read_csv("stops.txt")
 routes = pd.read_csv("routes.txt")
 trips = pd.read_csv("trips.txt")
-stop_times = pd.read_csv("stop_times.txt")
+
+# Use requests to fetch text from stop_times.txt as the file takes up too much local storage space
+url = "https://www.wienerlinien.at/ogd_realtime/doku/ogd/gtfs/stop_times.txt"
+response = requests.get(url)
+stop_times = pd.read_csv(StringIO(response.text))
 
 # STEP 2: Filter tram routes only (route_type == 0)
 tram_routes = routes[routes["route_type"] == 0]
