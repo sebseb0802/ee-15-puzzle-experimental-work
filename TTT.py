@@ -172,7 +172,7 @@ def random_opp(b: Board) -> int:
 # ==== Benchmark loop ====
 def run_avg_benchmark(fn, label: str):
     results = []
-    for depth in range(1, 6):
+    for depth in range(1, 7):
         total_time = total_nodes = total_moves = 0
         wins = draws = losses = 0
         for _ in range(50):
@@ -208,7 +208,7 @@ def run_avg_benchmark(fn, label: str):
             "loss_rate": losses / 50
         })
     df = pd.DataFrame(results)
-    df.to_csv(f"{label}_averaged.csv", index=False)
+    df.to_csv(f"data/{label}_averaged.csv", index=False)
     print(f"✅ Saved: {label}_averaged.csv")
 
 # ==== Run all agents ====
